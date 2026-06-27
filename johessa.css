@@ -675,7 +675,7 @@ nav.navbar{
 .menu-toggle{
     display: block;
     font-size: 30px;
-    margin-left: 220px;
+    margin-left: 270px;
     z-index: 1001;
 }
     /* BRING BACK HERO TEXT */
@@ -736,7 +736,7 @@ nav.navbar{
     position: absolute;
     top: 110px;   
     right: 5px;
-    width: 400px;
+    width: 430px;
 
     background: white;
     border-radius: 15px;
@@ -773,9 +773,9 @@ nav.navbar{
     .nav-links .active::after{
     display: none;
 }
-      .nav-links li{
+    .nav-links li{
     width: 100%;
-    padding: 15px 20px 15px 40px;
+    padding: 15px 20px 15px 20px;
     border-bottom: 1px solid #eee;
 }
 
