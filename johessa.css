@@ -614,34 +614,29 @@ ul li a{
 
 .blue-arch img{
     position: relative !important;
-    bottom: auto !important;
-    left: auto !important;
-    transform: none !important;
-
     width: 280px;
     height: 350px;
 
-    object-fit: contain; /* shows the full image */
+    object-fit: contain;
+    object-position: center bottom; /* Pushes the picture down */
 
-    border-radius: 20px; /* slightly curved square edges */
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
 
-    border: 4px ;
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,0.15);
-
-    background: transparent; /* no background */
+    background: transparent;
 }
 .student-name{
-    display:block;
-    position:relative !important;
+    display: block;
+    position: relative;
 
-    margin-top:15px;
-    text-align:center;
+    margin-top: 5px;   /* Pulls the text upward onto the image */
+    z-index: 2;
 
-    font-size:18px;
-    font-weight:700;
-    color:#09153e;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+    color: #09153e;
 }
 .blue-arch h3{
     color: #09153e;
@@ -673,10 +668,18 @@ nav.navbar{
 
 /* HAMBURGER */
 .menu-toggle{
-    display: block;
-    font-size: 30px;
-    margin-left: 270px;
-    z-index: 1001;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:30px;
+    cursor:pointer;
+
+    margin-left:200px;
+    margin-right:5px;
+
+    color:#09153e;
+    z-index:3000;
 }
     /* BRING BACK HERO TEXT */
     .content{
@@ -744,7 +747,7 @@ nav.navbar{
 
     display: none;
     flex-direction: column;
-    z-index: 999;
+    z-index:2500;
 }
 
 .nav-links .dropdown-menu{
