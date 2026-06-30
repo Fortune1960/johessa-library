@@ -48,7 +48,21 @@ document.querySelector(".sidebar");
 
 mobileMenuBtn.addEventListener("click", () => {
 
-sidebar.classList.toggle("show-sidebar");
+    sidebar.classList.toggle("show-sidebar");
+
+    // Change ☰ to ✕ and back
+    mobileMenuBtn.textContent =
+        sidebar.classList.contains("show-sidebar") ? "✕" : "☰";
 
 });
+document.addEventListener("click", (e) => {
 
+    if (
+        !sidebar.contains(e.target) &&
+        !mobileMenuBtn.contains(e.target)
+    ) {
+        sidebar.classList.remove("show-sidebar");
+        mobileMenuBtn.textContent = "☰";
+    }
+
+});

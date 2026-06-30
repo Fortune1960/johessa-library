@@ -16,11 +16,16 @@ document.querySelectorAll(".mobile-contact > a").forEach(contact => {
 });
 
     // Hamburger menu
-    menuToggle.addEventListener("click", (e) => {
-        e.stopPropagation();
-        navLinks.classList.toggle("active");
+menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
 
-    });
+    navLinks.classList.toggle("active");
+
+    // Change ☰ to ✕ and back
+    menuToggle.textContent = navLinks.classList.contains("active")
+        ? "✕"
+        : "☰";
+});
 
     // Contact menu
     contactBtn.addEventListener("click", (e) => {
@@ -56,19 +61,20 @@ document.querySelectorAll(".mobile-contact > a").forEach(contact => {
         });
     });
 
-    // Close only when clicking outside
-    document.addEventListener("click", (e) => {
+   // Close only when clicking outside
+document.addEventListener("click", (e) => {
 
-        if (!contact.contains(e.target)) {
-            contact.classList.remove("active");
-        }
+    if (!contact.contains(e.target)) {
+        contact.classList.remove("active");
+    }
 
-        if (
-            !navLinks.contains(e.target) &&
-            !menuToggle.contains(e.target)
-        ) {
-            navLinks.classList.remove("active");
-        }
-    });
+    if (
+        !navLinks.contains(e.target) &&
+        !menuToggle.contains(e.target)
+    ) {
+        navLinks.classList.remove("active");
+        menuToggle.textContent = "☰";
+    }
+});
 
 });
