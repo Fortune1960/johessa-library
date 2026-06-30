@@ -736,7 +736,7 @@ nav.navbar{
     position: absolute;
     top: 110px;   
     right: 10px;
-    width: min(90vw, 380px);
+    width: min(90vw, 400px);
 
     background: white;
     border-radius: 15px;
