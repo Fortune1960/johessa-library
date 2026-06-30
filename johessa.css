@@ -388,17 +388,22 @@ ul li a{
 }
 .blue-arch{
     width: 520px;
-    height: 700px;
-    border-radius: 260px 260px 0 0;
-    position: relative;
-    overflow: hidden;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .blue-arch img{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 95%;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+
+    width: 100%;
+    max-width: 520px;
+    height: 700px;
+
     object-fit: contain;
 }
 .vertical-text{
@@ -503,7 +508,19 @@ ul li a{
 #contactBtn:hover{
     color: #1847ff;
 }
-.student-name,
+.student-name{
+    display: block;
+    margin-top: -53px;
+
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    color: #09153e;
+
+    line-height: 1.4;
+}
+
+
 .blue-arch h3:nth-of-type(2),
 .blue-arch h3:nth-of-type(3){
     display: none;
