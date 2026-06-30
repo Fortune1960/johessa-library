@@ -19,6 +19,7 @@ document.querySelectorAll(".mobile-contact > a").forEach(contact => {
     menuToggle.addEventListener("click", (e) => {
         e.stopPropagation();
         navLinks.classList.toggle("active");
+
     });
 
     // Contact menu

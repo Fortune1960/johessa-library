@@ -164,7 +164,7 @@ ul li a{
     visibility: hidden;
     transform: translateY(10px);
 
-    transition: 0.3;
+    transition: 0.3s;
     z-index: 1000;
 }
 .dropdown li{
@@ -651,7 +651,7 @@ nav.navbar{
 }
 
 .logo{
-    margin-left: 10px;
+    margin-right: auto;
 }
 
 .logo img{
@@ -674,9 +674,6 @@ nav.navbar{
 
     font-size:30px;
     cursor:pointer;
-
-    margin-left:200px;
-    margin-right:5px;
 
     color:#09153e;
     z-index:3000;
@@ -738,8 +735,8 @@ nav.navbar{
         pointer-events: none;
     position: absolute;
     top: 110px;   
-    right: 5px;
-    width: 430px;
+    right: 10px;
+    width: min(90vw, 400px);
 
     background: white;
     border-radius: 15px;
