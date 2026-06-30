@@ -334,13 +334,13 @@ body{
 padding:10px;
 }
   .pdf-buttons{
-        gap: 10px;
+        gap: 15px;
         margin-top: 12px;
     }
 
     .pdf-buttons .download-btn{
         font-size: 15px;
-        padding: 19px 15px;
+        padding: 15px 15px;
         border-radius: 6px;
     }
 .menu{
