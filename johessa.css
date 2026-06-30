@@ -677,6 +677,19 @@ nav.navbar{
 
     color:#09153e;
     z-index:3000;
+}.menu-toggle{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:42px;   
+    font-weight:700;
+
+    cursor:pointer;
+    color:#09153e;
+    line-height:1;
+    user-select:none;
+    z-index:3000;
 }
     /* BRING BACK HERO TEXT */
     .content{
