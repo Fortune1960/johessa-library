@@ -283,6 +283,35 @@ color:white;
 transform:scale(1.08);
 }
 
+/* PDF BUTTON CONTAINER */
+.pdf-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* BOTH BUTTONS */
+.pdf-buttons .download-btn{
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    background: #0066cc;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.pdf-buttons .download-btn:hover{
+    background: #004d99;
+    transform: translateY(-2px);
+}
+
 @keyframes slide{
 
 from{
@@ -304,6 +333,16 @@ transform:translateX(0);
 body{
 padding:10px;
 }
+  .pdf-buttons{
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    .pdf-buttons .download-btn{
+        font-size: 15px;
+        padding: 13px 15px;
+        border-radius: 6px;
+    }
 .menu{
 max-height:none;
 overflow:visible;
