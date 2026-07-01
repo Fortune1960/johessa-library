@@ -631,29 +631,29 @@ ul li a{
 
 .blue-arch img{
     position: relative !important;
-    width: 280px;
+    width: 260px;
     height: 350px;
 
     object-fit: contain;
-    object-position: center bottom; /* Pushes the picture down */
+    object-position: center bottom;
 
-    border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.15);
-
+    border-radius: 0;      /* Removes the rounded frame */
+    box-shadow: none;      /* Removes the shadow/frame */
     background: transparent;
 }
 .student-name{
     display: block;
     position: relative;
 
-    margin-top: 5px;   /* Pulls the text upward onto the image */
-    z-index: 2;
+    margin-top: -1px;   /* Moves the name upward */
 
     text-align: center;
     font-size: 17px;
     font-weight: 700;
     line-height: 1.3;
     color: #09153e;
+
+    z-index: 2;
 }
 .blue-arch h3{
     color: #09153e;
@@ -840,8 +840,8 @@ nav.navbar{
     .vertical-text{
     display: block;
     position: absolute;
-    right: -130px;
-    top: 260px;
+    right: -140px;
+    top: 230px;
     transform: rotate(90deg);
     letter-spacing: 5px;
     color: #071e68;
