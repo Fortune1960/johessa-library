@@ -1,169 +1,815 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pliant:ital,wght@0,100..900;1,100..900&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Pliant", sans-serif;
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
-body {
-     min-height: 100vh;
-     width: 100%;
-    background-image:  url("images/aboutbackground.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-   
-   
-}
-.container{
-    min-height: 100vh;
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#ffffff;
+    color:#1b2b52;
+    line-height:1.7;
     overflow-x:hidden;
-    display: flex;
-    padding: 20px;
-}
-.content-section{
-    flex: 1;
-}
-.text-section{
-    margin-bottom: 40px;
-}
-.text-section h1{
-    font-size: 2.2rem;
-    line-height: 1.3;
-    margin-bottom: 20px;
-    right: 50%;
-}
-.text-section p{
-    color: black;
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    line-height: 1.9;
-    max-width: 500px;
-}
-.card{
-   display: none;
-}
-.image-section img{
-    width: 490px;
-    height: 50vh;
-    border-radius: 10px;
-}
-.image-section h2{
-    font-size: 1.5rem;
-    margin-bottom: 125px;
-    line-height: 2.5;
-    max-width: 550px;
-}
-.image-section p{
-    font-size: 1.9rem;
-    margin-bottom: 125px;
-    line-height: 0.2;
-    max-width: 550px;
-}
-.button{
-    width: 150px;
-    padding: 12px;
-    margin-left: 20px;
-    margin-bottom: 20px;
-    background-color:  #09153e;
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    font-size: 15px;
-    color: white;
-    border-radius: 25px;
-}
-.button:hover{
-    background-color: #1847ff ;
 }
 
-powered-section{
-    display: flex;
-    justify-content: center;
-    margin: 70px 0;
-    
-    
+img{
+    width:100%;
+    display:block;
 }
-.powered-box{
-    padding: 15px 510px;
-    border-radius: 15px;
-    font-size: 24px;
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+section{
+    padding:90px 8%;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+header{
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1000;
+    background:#ffffff;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+}
+
+.navbar{
+
+    max-width:1300px;
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 25px;
+
+}
+
+.logo img{
+
+    width:130px;
+    height:auto;
+
+}
+
+.nav-links{
+
+    display:flex;
+    align-items:center;
+    gap:45px;
+
+}
+
+.nav-links a{
+
+    color:#2148d8;
+    font-weight:600;
+    transition:.35s;
+
+}
+
+.nav-links a:hover{
+
+    color:#0f72ff;
+
+}
+
+.nav-links a.active{
+
+    color:#0f72ff;
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    margin-top:30px;
+
+    background:linear-gradient(135deg,#1d4ed8,#0f72ff);
+
+    color:white;
+
+    text-align:center !important;
+
+    padding:80px 20px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.hero::before{
+
+    content:"ABOUT";
+
+    position:absolute;
+
+    top:70%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    font-size:150px;
+
+    font-weight:800;
+
+    color:rgba(255,255,255,.09);
+
+    letter-spacing:12px;
+
+    user-select:none;
+
+}
+
+.hero-content{
+
+    position:relative;
+    z-index:5;
+
+}
+
+.hero h1{
+
+    font-size:42px;
+    margin-top:125px;
+
+}
+
+/* ==========================================
+   ABOUT SECTION
+========================================== */
+
+.about{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.about-image{
+
+    text-align:center;
+
+}
+
+.about-image img{
+
+    width:100%;
+    max-width:520px;
+    margin:auto;
+
+}
+
+.about-text h5{
+
+    color:#0f72ff;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+}
+
+.about-text h2{
+
+    font-size:45px;
+
+    color:#13254d;
+
+    margin-bottom:25px;
+
+    line-height:1.2;
+
+}
+
+.about-text p{
+
+    color:#666;
+
+    margin-bottom:20px;
+
+    font-size:17px;
+
+}
+.about-text h4{
+    color: #666;
+    font-size: 25px;
     font-weight: 600;
-    color: #09153e;
-}
-.powered-box span{
-    color: #1847ff;
-    font-weight: 700;
 }
 
+/* About Card Effect */
 
-@media screen and (max-width:650px){
-    .container{
-        display: flex;
-        padding: 20px;
-        flex-direction: column;
-        margin: auto;
-        border-radius: 12px;
-    }
-    .image-section h2{
-        font-size: 1.4rem;
-        margin-bottom: 25px;
-        width: 100%;
-        line-height: 2;
+.about-text{
 
-    }
-    powered-section{
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px 0;
-        margin: 40px auto 0;
-    }
-    .powered-box{
+    padding:20px;
 
-        width: 85%;
-        margin: 0 auto ;
-        text-align: center;
-        padding: 12px 20px;
-        font-size: 18px;
-    }
-   
-    .image-section img{
-        width: 100%;
-        height: 250px;
-        border-radius: 10px;
-    }
-    .text-section h1{
-        margin-bottom: 5px;
-        font-size: 2.4rem;
-    }
-    .card{
-        display: block;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-        text-align: center;
-        overflow: hidden;
-        margin-top: 30px;
-
-    }
-    .card img{
-        width: 100%;
-        height: 40vh;
-        border-top-left-radius: 10px;
-        
-    }
-    
 }
 
+.about-image img{
 
-@media screen and (min-width:650px) and (max-width:850px) {
-    .container{
-        display: flex;
-        padding: 20px;
-        flex-direction: column;
-        margin: auto;
-        border-radius: 12px;
+    border-radius:25px;
+
+    transition:.5s;
+
+}
+
+.about-image img:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 50px rgba(0,114,255,.25);
+
+}
+
+/* ==========================================
+   COMMON TITLES
+========================================== */
+
+h2{
+
+    font-weight:700;
+
+}
+
+h5{
+
+    font-weight:700;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#0f72ff;
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#f2f5ff;
+
+}
+/* ==========================================
+   EXPERIENCE SECTION
+========================================== */
+
+.experience{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:70px;
+    align-items:center;
+    background:#f8fbff;
+}
+
+.experience-text h5{
+    color:#0f72ff;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.experience-text h2{
+    font-size:42px;
+    color:#13254d;
+    margin-bottom:25px;
+    line-height:1.3;
+}
+
+.experience-text p{
+    color:#666;
+    margin-bottom:35px;
+    font-size:17px;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.features div{
+    background:#fff;
+    padding:18px 22px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+    font-weight:600;
+    color:#1f3f75;
+    transition:.35s ease;
+}
+
+.features div:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(15,114,255,.18);
+}
+
+.features i{
+    color:#0f72ff;
+    margin-right:10px;
+}
+
+.experience-image img{
+    max-width:540px;
+    margin:auto;
+    border-radius:25px;
+    transition:.45s;
+}
+
+.experience-image img:hover{
+    transform:scale(1.03);
+    box-shadow:0 25px 50px rgba(15,114,255,.25);
+}
+
+/* ==========================================
+   CORE VALUES
+========================================== */
+
+.values{
+    text-align:center;
+}
+
+.values h5{
+    color:#0f72ff;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.values h2{
+    font-size:42px;
+    color:#13254d;
+    margin-bottom:15px;
+}
+
+.values>p{
+    max-width:700px;
+    margin:0 auto 60px;
+    color:#666;
+    font-size:17px;
+}
+
+.value-cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#fff;
+    border-radius:22px;
+    padding:45px 35px;
+    box-shadow:0 10px 25px rgba(0,0,0,.07);
+    transition:.4s ease;
+}
+
+.card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 45px rgba(15,114,255,.18);
+}
+
+.card i{
+    font-size:48px;
+    color:#0f72ff;
+    margin-bottom:25px;
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#13254d;
+    font-size:24px;
+}
+
+.card p{
+    color:#666;
+    font-size:16px;
+    line-height:1.7;
+}
+
+/* ==========================================
+   TEAM SECTION
+========================================== */
+
+.team{
+    background:#f8fbff;
+    text-align:center;
+}
+
+.team h5{
+    color:#0f72ff;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    margin-bottom:12px;
+}
+
+.team h2{
+    font-size:42px;
+    color:#13254d;
+    margin-bottom:15px;
+}
+
+.team>p{
+    max-width:700px;
+    margin:0 auto 60px;
+    color:#666;
+}
+
+/* ==========================================
+   TEAM GRID
+========================================== */
+
+.team-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+/* ==========================================
+   TEAM CARD
+========================================== */
+
+.member{
+    background:#fff;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.4s ease;
+}
+
+.member:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 45px rgba(15,114,255,.20);
+}
+
+.member img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.member:hover img{
+    transform:scale(1.08);
+}
+
+.member h3{
+    margin-top:20px;
+    color:#13254d;
+    font-size:22px;
+}
+
+.member span{
+    display:block;
+    color:#0f72ff;
+    margin-top:8px;
+    margin-bottom:25px;
+    font-weight:500;
+}
+
+/* ==========================================
+   CARD ANIMATIONS
+========================================== */
+
+.card,
+.member,
+.features div{
+    opacity:0;
+    transform:translateY(40px);
+    animation:fadeUp .8s forwards;
+}
+
+.card:nth-child(2){
+    animation-delay:.2s;
+}
+
+.card:nth-child(3){
+    animation-delay:.4s;
+}
+
+.member:nth-child(2){
+    animation-delay:.1s;
+}
+
+.member:nth-child(3){
+    animation-delay:.2s;
+}
+
+.member:nth-child(4){
+    animation-delay:.3s;
+}
+
+.member:nth-child(5){
+    animation-delay:.4s;
+}
+
+.member:nth-child(6){
+    animation-delay:.5s;
+}
+
+.member:nth-child(7){
+    animation-delay:.6s;
+}
+
+.member:nth-child(8){
+    animation-delay:.7s;
+}
+
+.member:nth-child(9){
+    animation-delay:.8s;
+}
+
+.member:nth-child(10){
+    animation-delay:.9s;
+}
+
+.member:nth-child(11){
+    animation-delay:1s;
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
     }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+/*==========================================
+    FOOTER
+==========================================*/
+
+footer{
+    background:#0f2d6b;
+    color:#fff;
+    text-align:center;
+    padding:80px 8% 40px;
+}
+
+footer h2{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+footer p{
+    color:#d5dff8;
+    max-width:650px;
+    margin:0 auto;
+    line-height:1.8;
+}
+
+.socials{
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    margin:35px 0;
+}
+
+.socials a{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#1d4ed8;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:20px;
+    transition:.35s;
+}
+
+.socials a:hover{
+    background:#fff;
+    color:#1d4ed8;
+    transform:translateY(-6px);
+}
+
+.copyright{
+    margin-top:35px;
+    border-top:1px solid rgba(255,255,255,.15);
+    padding-top:25px;
+    font-size:15px;
+}
+
+/*==========================================
+    HOVER EFFECTS
+==========================================*/
+
+.nav-links a{
+    position:relative;
+}
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    background:#0f72ff;
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+.member,
+.card,
+.features div,
+.about-image img,
+.experience-image img{
+    cursor:pointer;
+}
+
+/* ===============================
+   TABLET
+================================ */
+
+@media (max-width:992px){
+
+.about,
+.experience{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.team-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.value-cards{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.hero{
+    padding:70px 20px;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width:768px){
+
+section{
+    padding:60px 20px;
+}
+
+.hero{
+    margin-top:90px;
+    padding:45px 20px;
+    min-height:170px;
+}
+
+.hero h1{
+    font-size:28px;
+    margin-top:50px !important;
+}
+
+.hero::before{
+    font-size:85px;
+    margin-top: 1px;
+     color:rgba(255,255,255,.14);
+
+}
+.about-text h4{
+    font-size:34px !important;
+    font-weight:700;
+    line-height:1.4;
+    margin-top:20px;
+}
+
+.about,
+.experience{
+    grid-template-columns:1fr;
+}
+
+.features{
+    grid-template-columns:1fr;
+}
+.values h2{
+    font-size: 23px;
+}
+
+.value-cards{
+    grid-template-columns:1fr;
+}
+
+.team-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.member{
+    display:block;
+}
+
+.member img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+}
+
+}
+
+/* ===============================
+   SMALL PHONES
+================================ */
+
+@media (max-width:480px){
+    .about-text h4{
+    font-size:24px;
+    font-weight:700;
+    line-height:1.4;
+}
+
+.hero{
+    padding:35px 15px;
+    min-height:140px;
+}
+
+.hero h1{
+    margin-top:35px;
+    font-size:24px;
+}
+
+.hero::before{
+    font-size:40px;
+}
+
+.team-grid{
+    grid-template-columns:1fr;
+}
+
+.member img{
+    height:280px;
+}
+
 }
