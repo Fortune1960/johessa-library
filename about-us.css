@@ -231,6 +231,9 @@ header{
     font-size: 25px;
     font-weight: 600;
 }
+.about-text h3{
+    color: #666;
+}
 
 /* About Card Effect */
 
@@ -787,10 +790,13 @@ section{
 
 }
 .about-text h4{
-    font-size:34px !important;
-    font-weight:700;
+    font-size:25px !important;
+    font-weight:700 !important;
     line-height:1.4;
     margin-top:20px;
+}
+.about-text h3{
+    color: #666;
 }
 
 .about,
