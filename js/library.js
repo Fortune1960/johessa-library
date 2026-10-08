@@ -1,0 +1,46 @@
+// Semester / notes tabs
+const tabs = document.querySelectorAll(".tab-btn");
+const contents = document.querySelectorAll(".tab-content");
+
+tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+        tabs.forEach(btn => btn.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+
+        tab.classList.add("active");
+        document.getElementById(tab.dataset.tab).classList.add("active");
+    });
+});
+
+// Sidebar department dropdowns
+const deptTitles = document.querySelectorAll(".dept-title");
+
+deptTitles.forEach(dept => {
+    dept.addEventListener("click", () => {
+        const menu = dept.nextElementSibling;
+        menu.classList.toggle("show");
+    });
+});
+
+// Mobile sidebar toggle
+const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+const sidebar = document.querySelector(".sidebar");
+
+mobileMenuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("show-sidebar");
+
+    // Change ☰ to ✕ and back
+    mobileMenuBtn.textContent =
+        sidebar.classList.contains("show-sidebar") ? "✕" : "☰";
+});
+
+// Close the sidebar when clicking outside it
+document.addEventListener("click", (e) => {
+    if (
+        !sidebar.contains(e.target) &&
+        !mobileMenuBtn.contains(e.target)
+    ) {
+        sidebar.classList.remove("show-sidebar");
+        mobileMenuBtn.textContent = "☰";
+    }
+});
